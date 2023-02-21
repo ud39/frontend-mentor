@@ -1,0 +1,25 @@
+main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+}
+
+main > section:first-child{
+    color: white;
+}
+
+main section {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+@media screen and (max-width:425px) {
+    main section {
+        flex: 100%;
+    }
+}
+
+button {
+    cursor: pointer;
+}
