@@ -2,6 +2,8 @@ main {
     display: flex;
     flex-wrap: wrap;
     width: 70%;
+    background-color: aliceblue;
+    padding: 2rem;
 }
 
 main > section:first-child{
@@ -15,11 +17,28 @@ main section {
 }
 
 @media screen and (max-width:425px) {
-    main section {
+    section#results{
         flex: 100%;
     }
 }
 
 button {
     cursor: pointer;
+}
+
+#results {
+    background-color: red;
+    padding: 1rem 2rem 2rem 2rem;
+}
+
+
+#results p span:first-child {
+    display: flex;
+    gap: 0.25rem;
+    float: left;
+}
+
+#results p span:nth-child(2){
+    display: flex;
+    float: right;
 }
