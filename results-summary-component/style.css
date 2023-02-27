@@ -1,13 +1,27 @@
+body {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
 main {
     display: flex;
     flex-wrap: wrap;
-    width: 70%;
-    background-color: aliceblue;
-    padding: 2rem;
+    width: 60%;
+    border-radius: 45%;
+    background-color: white;
+
 }
 
 main > section:first-child{
-    color: white;
+    color: red;
+    border-radius: 30px;
+    background-color: bisque;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    padding: 1rem 2rem 2rem 2rem;
 }
 
 main section {
@@ -16,8 +30,29 @@ main section {
     flex-direction: column;
 }
 
+#results {
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    color: white;
+}
+
+#results div > strong {
+    font-size: 4.5rem;
+}
+
+#results div:first-of-type{
+    border-radius: 2rem;
+    border-radius: 50%;
+    padding: 3.5rem;
+    background-image: linear-gradient(to bottom,  hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+
+}
+
 @media screen and (max-width:425px) {
-    section#results{
+    section#summary{
         flex: 100%;
     }
 }
@@ -26,19 +61,59 @@ button {
     cursor: pointer;
 }
 
-#results {
-    background-color: red;
+#summary {
+    background-color: white;
     padding: 1rem 2rem 2rem 2rem;
 }
 
 
-#results p span:first-child {
+#summary p span:first-child {
     display: flex;
     gap: 0.25rem;
     float: left;
 }
 
-#results p span:nth-child(2){
+#summary p span:nth-child(2){
     display: flex;
     float: right;
+}
+
+#summary p {
+    padding: 1.25rem 1rem;
+    border-radius: 15px;
+}
+
+#summary p span > strong {
+    margin-right: 0.3rem;
+}
+
+#reaction {
+    background-color: hsl(0, 100%, 67%, 10%);
+}
+
+#memory {
+    background-color: hsl(39, 100%, 56%, 10%);
+}
+
+
+#verbal {
+    background-color: hsl(166, 100%, 37%, 10%);
+}
+
+#visual {
+    background-color: hsl(234, 85%, 45%, 10%);
+}
+
+button {
+    color: white;
+    border-width: 0;
+    border-radius: 45px;
+    font-family: inherit;
+    font-size: 1.25rem;
+    font-style: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    padding: 1rem 1.25rem; 
+    background-color: hsl(241, 91%, 28%);
+    
 }
