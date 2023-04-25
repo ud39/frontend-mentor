@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">  
   
   <title>Frontend Mentor | Interactive rating component</title>
 
@@ -18,26 +19,51 @@
 
   <!-- Rating state start -->
 
-  How did we do?
+  <main class='rating'> 
+  
+  <h1 class='rating'>How did we do? </h1>
 
-  Please let us know how we did with your support request. All feedback is appreciated 
+  <p> Please let us know how we did with your support request. All feedback is appreciated 
   to help us improve our offering!
+  </p>
 
-  1 2 3 4 5
+  <form class='rating' action='' method='POST'>
 
-  Submit
+  <fieldset>
+
+	  <input type='radio' name='rating-value' id='one' value=1> 
+	  <label for='one'> 1 </label>
+
+	  <input type='radio' name='rating-value' id='two' value=2> 
+	  <label for='two'> 2 </label>
+	  
+	  <input type='radio' name='rating-value' id='three' value=3> 
+	  <label for='three'> 3 </label>
+
+	  <input type='radio' name='rating-value' id='four' value=4> 
+	  <label for='four'> 4 </label>
+
+	  <input type='radio' name='rating-value' id='five' value=5> 
+	  <label for='five'> 5 </label>
+
+  </fieldset>
+
+  <input type='submit' value='Submit'> 
+  </form>
 
   <!-- Rating state end -->
 
   <!-- Thank you state start -->
+  <section class='thank-you'> 
+  You selected <p class='selected-rating'></p> out of 5
 
-  You selected <!-- Add rating here --> out of 5
+  <h1> Thank you! </h1>
 
-  Thank you!
+  <p> We appreciate you taking the time to give a rating. If you ever need more support, 
+  don’t hesitate to get in touch! </p>
 
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
+  </section>
+  </main>
   <!-- Thank you state end -->
 
   
