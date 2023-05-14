@@ -1,26 +1,105 @@
 * {
-
- margin:0;
-
+  margin:0;
 }
 
 
 html, body {
-
- box-sizing: border-box;
- height:100%;
-
+  background-color: black;
+  box-sizing: border-box;
+  height:100%;
 }
 
-input, button, textarea, select {
- font:inherit;
 
+#star::after {
+  background:gray;
+  border-radius: 50%;
+  width: 100%;
+  content: '\2605';
+  color: orange;
+  padding: 0.5rem;
 }
 
-thank-you {
- visibility:hidden;
-
+form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
+input[type='submit'] {
+  border-radius: 20px;
+  border: 0px;
+  width: 100%;
+  color: white;
+  background-color: orange;
+  padding: 5%;
+  margin-block-start: 2rem;
+  text-transform: uppercase;
+  font:inherit;
+}
+
+fieldset {
+  display: flex;
+  justify-content: space-between;
+  border: 0px;
+  padding: 0px;
+}
+
+
+fieldset input[type='radio'] {
+  border-radius: 40%;
+  background-color: gray;
+  display:none;
+}
+
+fieldset label {
+  color: white;
+  background-color:gray;
+  border-radius: 50%;
+  border: red 1px;
+  padding: 1rem;
+  display: inline-block;
+}
+
+fieldset input[type='radio']:checked + label{
+  background-color: orange;
+  transition: 1s ease;
+}
+
+h1 {
+  color: white;
+}
+
+p {
+  color: white;
+}
+
+main {
+  margin: auto;
+  display:flex;
+  flex-direction:column;
+  min-width: 20%;
+  background-color: black;
+  border-radius: 12.5%;
+}
+
+
+
+main > * {
+  padding: 5%;
+}
+
+
+
+
+.thank-you {
+  display: none;
+}
+
+
+@media (min-width: 700px){ 
+  main {
+    width: 20%;
+  }
+}
 
 
