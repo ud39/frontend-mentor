@@ -6,6 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">  
+  <script src="main.js" defer></script>
   
   <title>Frontend Mentor | Interactive rating component</title>
 
@@ -50,14 +51,15 @@
 
   </fieldset>
 
-  <input type='submit' value='Submit'> 
+  <input type='submit' value='Submit' onclick='submitRating(event)'> 
   </form>
  
   <!-- Rating state end -->
 
   <!-- Thank you state start -->
   <section class='thank-you'> 
-  You selected <p class='selected-rating'></p> out of 5
+  <img src="images/illustration-thank-you.svg" alt="">
+  <p class='selected-rating'> You selected <i class='selected-rating'>${test}</i> out of 5</p>
 
   <h1> Thank you! </h1>
 
