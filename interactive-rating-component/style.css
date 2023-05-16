@@ -1,3 +1,13 @@
+:root {
+ --primary-accent: hsl(25, 97%, 53%); 
+ --primary-text: hsl(0, 0%, 100%);
+ --primary-bg: hsl(216, 12%, 8%);
+ --primary-bg-second: hsl(217, 12%, 63%);
+ --rating-bg:  hsl(213, 19%, 18%);
+
+ font-size: 15px;
+
+}
 * {
   margin:0;
 }
@@ -6,16 +16,22 @@
 html, body {
   background-color: black;
   box-sizing: border-box;
+  color:#141519;
   height:100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
 }
 
 
 #star::after {
-  background:gray;
+  background: var(--rating-bg);
   border-radius: 50%;
   width: 100%;
   content: '\2605';
-  color: orange;
+  color: var(--primary-accent);
   padding: 0.5rem;
 }
 
@@ -30,11 +46,12 @@ input[type='submit'] {
   border: 0px;
   width: 100%;
   color: white;
-  background-color: orange;
+  background-color: var(--primary-accent);
   padding: 5%;
   margin-block-start: 2rem;
   text-transform: uppercase;
   font:inherit;
+  cursor: pointer;
 }
 
 fieldset {
@@ -47,22 +64,36 @@ fieldset {
 
 fieldset input[type='radio'] {
   border-radius: 40%;
-  background-color: gray;
+  background-color: var(--primary-bg-second);
   display:none;
 }
 
 fieldset label {
+  cursor: pointer;
   color: white;
-  background-color:gray;
+  background-color:var(--rating-bg);
   border-radius: 50%;
   border: red 1px;
   padding: 1rem;
   display: inline-block;
 }
 
+input[type='submit']:hover {
+  border-radius: 20px;
+  border: 0px;
+  width: 100%;
+  color: var(--primary-accent);
+  background-color: var(--primary-text);
+  padding: 5%;
+  margin-block-start: 2rem;
+  text-transform: uppercase;
+  font:inherit;
+  cursor: pointer;
+}
+
 fieldset input[type='radio']:checked + label{
   background-color: orange;
-  transition: 1s ease;
+  transition: 0.2s ease;
 }
 
 h1 {
@@ -77,8 +108,8 @@ main {
   margin: auto;
   display:flex;
   flex-direction:column;
-  min-width: 20%;
-  background-color: black;
+  min-width: 25%;
+  background-color: var(--primary-bg);
   border-radius: 12.5%;
 }
 
@@ -92,11 +123,25 @@ main > * {
 
 
 .thank-you {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
+  gap: 1rem;
 }
 
+p.selected-rating {
+  border: none;
+  border-radius: 12px;
+  color: var(--primary-accent);
+  background-color: gray;
+  padding: 0.5rem;
+  text-align: center;
+  width: 60%;
+}
+
+em.selected-rating {
+  font-style: normal;
+}
 
 @media (min-width: 700px){ 
   main {
