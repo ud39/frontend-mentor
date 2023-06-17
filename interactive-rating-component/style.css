@@ -122,21 +122,29 @@ main {
 }
 
 
-
 main > * {
   padding: 5%;
 }
+
 
 .rating {
   opacity: 1;
   transition: opacity 0.5s;
 }
 
-.thank-you {
-  display: none;
+.wrapper-height-auto {
+  display: flex;
+
+}
+
+.wrapper-height-auto .thank-you {
+  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
 }
 
 p.selected-rating {

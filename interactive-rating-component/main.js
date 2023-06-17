@@ -22,7 +22,7 @@ function submitRating(e) {
         element.style.display = 'none';
       });
 
-      thankYou.style.display = 'flex';
+      thankYou.style.maxHeight = '100%';
     }
   };
 
