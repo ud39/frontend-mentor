@@ -1,8 +1,8 @@
 # Challenges from frontendmentor.io solved by me   
 
-This is my repo for Front-End Mentor Challenges  
+This is my repo for front-end mentor challenges  
 
-Solutions are being solved using only Javascript, CSS and semantic HTML. 
+solutions are being solved using only JavaScript, CSS and semantic HTML. 
 
 
 
@@ -11,12 +11,14 @@ Solutions are being solved using only Javascript, CSS and semantic HTML.
 
 | Challenge Name       | Preview                                 |
 |----------------------|-----------------------------------------|
-| [QR-Code](https://ud39.github.io/frontend-mentor/qr-code-component/) | ![QR-Code-Component Preview](preview-images/qr-code.png) |
-| [Product-Preview](https://ud39.github.io/frontend-mentor/product-preview-card-component/) | ![Product-Preview Preview](preview-images/product-preview.png)|
-| [Results-Summary](https://ud39.github.io/frontend-mentor/results-summary-component/) | ![Interactive Rating Component Preview](preview-images/results-summary.png)|
+| [QR-Code](https://ud39.github.io/frontend-mentor/qr-code-component/) | ![qr-code-component preview](preview-images/qr-code.png) |
+| [Product-Preview](https://ud39.github.io/frontend-mentor/product-preview-card-component/) | ![product-preview preview](preview-images/product-preview.png)|
+| [Results-Summary](https://ud39.github.io/frontend-mentor/results-summary-component/) | ![results-summary preview](preview-images/results-summary.png)|
+| [Interactive-Rating](https://ud39.github.io/frontend-mentor/interactive-rating-component/) | ![interactive-rating preview](preview-images/interactive-rating.png)|
 
 
+## Junior
 
-
-
-
+| Challenge Name       | Preview                                 |
+|----------------------|-----------------------------------------|
+| [Newsletter-Sign-Up](https://ud39.github.io/frontend-mentor/newsletter/) | ![newsletter-sign-up preview](preview-images/newsletter-sign-up.png) |
