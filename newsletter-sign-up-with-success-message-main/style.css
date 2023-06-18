@@ -156,10 +156,31 @@ img.icon-check {
   width: 10dvh;
 }
 
-@media screen and (max-width: 475px){
+@media screen and (max-width: 375px){
   
   main {
     flex-direction: column-reverse;
   }
 
+  picture {
+    padding: 0;
+  }
+
+  ul li::before {
+    content: "";
+    width: 26px;
+    height: 26px;
+    margin-inline-end: 15px;
+    background-image: url("assets/images/icon-list.svg");
+    background-repeat: space no-repeat;
+  }
+
+  .thank-you {
+    margin-block-start: 20dvh;
+    height: 100dvh;
+  }
+
+  .thank-you button{
+   margin-block-start: auto; 
+  }
 }
