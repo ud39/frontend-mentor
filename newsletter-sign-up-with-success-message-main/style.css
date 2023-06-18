@@ -62,15 +62,6 @@ ul li::before {
 }
 
 
-.wrapper-height-auto {
-  display: none;
-  opacity: 0;
-}
-
-
-.thank-you {
-  opacity: 0;
-}
 
 form {
   display: flex;
@@ -90,6 +81,10 @@ input[type='email'] {
   opacity: 0.5;
 }
 
+input[type='email']::before {
+  content: "Hello Word";
+  color: blue;
+}
 
 input[type='email']:focus {
   opacity: 1;
@@ -98,8 +93,24 @@ input[type='email']:focus {
   cursor: pointer;
 }
 
-input[type='submit'] {
-  border: none;
+form div {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  position: relative;
+}
+
+input[type='email'] + p {
+  display: inline;
+  position: absolute;
+  margin: 0;
+  right: 0;
+  color: red;
+}
+
+input[type='submit'],
+#dismiss{
+  border: none; 
   border-radius: 12px;
   outline: none;
   padding: 1rem;
@@ -107,7 +118,8 @@ input[type='submit'] {
   background-color: var(--slate-bg-color)
 }
 
-input[type='submit']:hover {
+input[type='submit']:hover,
+#dismiss:hover{
   border-radius: 12px;
   padding: 1rem;
   color: white;
@@ -116,10 +128,33 @@ input[type='submit']:hover {
   cursor: pointer;
 }
 
+#error-message {
+  display: none;
+}
+
+.wrapper-height-auto {
+  display: none;
+}
+
+.thank-you{
+  max-height: 10%;
+  width: 45dvh;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+#submitted-email {
+  font-size: 1rem;
+}
+
 strong {
   font-size: 0.8rem;
 }
 
+
+img.icon-check {
+  width: 10dvh;
+}
 
 @media screen and (max-width: 475px){
   
