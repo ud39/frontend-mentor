@@ -1,19 +1,33 @@
 :root {
-
+  --white-bg-color: hsl(0, 0%, 100%);
+  --charcoal-bg-color: hsl(235, 18%, 26%);  
+  --slate-bg-color: hsl(234, 29%, 20%);
+  --active-bg-color: hsl(4, 100%, 67%);
 }
 
 html {
-  background-color: gray;
+  background: var(--charcoal-bg-color);
+  font-size: 16px;
+  height: 100vh;
 }
 
 h1 {
   font-size: 3rem;
+  font-family: 'Robot', sans-serif;
   margin-block-end: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
 }
 
 main {
   display: flex;
-  background-color: white;
+  font-family: 'Robot', sans-serif;
+  background-color: var(--white-bg-color);
   border-radius: 12px;
   margin: auto;
   width: fit-content;
@@ -27,6 +41,24 @@ section {
 
 picture {
   padding: 1rem;
+}
+
+ul {
+  padding:0px
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+ul li::before {
+  content: "";
+  width: 21px;
+  height: 21px;
+  margin-inline-end: 15px;
+  background-image: url("assets/images/icon-list.svg")
 }
 
 
@@ -46,6 +78,10 @@ form {
   gap: 1rem;
 }
 
+form label {
+  font-family: 'Robot', sans-serif;
+}
+
 input[type='email'] {
   border-radius: 12px;
   padding: 1rem;
@@ -54,11 +90,30 @@ input[type='email'] {
   opacity: 0.5;
 }
 
+
+input[type='email']:focus {
+  opacity: 1;
+  color:black;
+  outline: 1px black solid;
+  cursor: pointer;
+}
+
 input[type='submit'] {
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  padding: 1rem;
+  color: var(--white-bg-color);
+  background-color: var(--slate-bg-color)
+}
+
+input[type='submit']:hover {
   border-radius: 12px;
   padding: 1rem;
   color: white;
-  background-color: black;
+  background: linear-gradient(90deg, hsl(0, 68%, 60%), hsl(28, 100%, 62%), hsl(37, 100%, 62%));
+  box-shadow: 0 10px 20px 0 rgba(215, 85, 85, 0.4);
+  cursor: pointer;
 }
 
 strong {
