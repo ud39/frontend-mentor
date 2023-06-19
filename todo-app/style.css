@@ -1,0 +1,141 @@
+:root {
+  --check-bg: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+  --bright-blue: hsl(220, 98%, 61%);
+
+  --light-font: hsl(0, 0%, 98%);
+  --light-bg: hsl(236, 33%, 92%);
+  --light-blue: hsl(233, 11%, 84%);
+  --light-dark-grayish: hsl(236, 9%, 61%);
+  --light-vdark-grayish: hsl(235, 19%, 35%);
+  font-size: 18px;
+}
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+
+html {
+  background-color: var(--light-dark-grayish) ;
+}
+
+main {
+  position:relative;
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  margin-inline: auto;
+  z-index: 1;
+  top: 15dvh;
+  width: 50dvh;
+  height: 100dvh;
+  color: white;
+}
+
+
+header {
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  background-image: url("images/bg-desktop-dark.jpg");
+  background-repeat: no-repeat space;
+  background-size: cover;
+}
+
+.theme-select {
+  display: flex;
+  justify-content: space-between;
+}
+
+.theme-select h1 {
+  text-transform: uppercase;
+}
+
+.theme-select img {
+  height: 21px;
+  width: 21px;
+  align-self: center;
+  cursor: pointer;
+}
+
+section {
+  width: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+section input[type='text'] {
+  display: flex;
+  outline: none;
+  margin-block-start: 5dvh;
+  width:inherit;
+  box-shadow: -1px 4px rgba(0, 0, 0, 0.2);
+}
+
+ul.list-actions {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin:0;
+  padding:0;
+}
+
+ul.list-actions{
+  display: flex;
+  margin-top:auto;
+}
+
+.list-actions li {
+  cursor: pointer;
+  color: var(--light-font);
+
+}
+
+.list-actions li:hover {
+  color: gray;
+  cursor: pointer;
+
+}
+
+.list-items {
+  margin-block-start: 2.5dvh;
+  padding: 0;
+}
+
+.list-item .check{
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+  z-index: 0;
+}
+
+.list-item .check:hover:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  padding: 1px;
+  border-radius: 50%;
+  background: linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  -webkit-mask: 
+    linear-gradient(hsl(0, 0%, 0%) 0 0) content-box, 
+    linear-gradient(hsl(0, 0%, 0%) 0 0);
+  mask: 
+    linear-gradient(hsl(0, 0%, 0%) 0 0) content-box, 
+    linear-gradient(hsl(0, 0%, 0%) 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+#drag-drop-hint{
+  margin-block-start: 15dvh;
+  margin-block-end: 15dvh;
+}

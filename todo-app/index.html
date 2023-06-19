@@ -18,38 +18,46 @@
 </head>
 <body>
 
+    <header>
+    </header>
     <main>                  
-        <header>
+        <section class="title theme-select">
             <h1>Todo</h1>
             <img src="images/icon-sun.svg" alt="sun" onclick="changeTheme()">
+        </section>
 
-        </header>
         <section class="list"> 
             <input type="text" name="listitem" id="">
             <ul class="list-items">
+
                 <li class="list-item">
-                    <img src="images/icon-check.svg" alt="check">
+                    <span class="check"><img src="images/icon-check.svg"  alt="check"></span>
                     <img src="images/icon-cross.svg" alt="cross">
                 </li>
+
+                <li class="list-item">
+                    <span class="check"><img src="images/icon-check.svg"  alt="check"></span>
+                    <img src="images/icon-cross.svg" alt="cross">
+                </li>
+                <ul class="list-actions">
+                    <li><!-- Add dynamic number --> items left</li>
+
+                    <li>All</li>
+                    <li>Active</li>
+                    <li>Completed</li>
+
+                    <li>Clear Completed</li>
+                </ul>
             </ul>
         </section>
-        <ul class="list-actions">
-            <li><!-- Add dynamic number --> items left</li>
-            
-            <li>All</li>
-            <li>Active</li>
-            <li>Completed</li>
-
-            <li>Clear Completed</li>
-        </ul>
 
         <p id="drag-drop-hint">Drag and drop to reorder list</p>
 
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="#">ud39</a>.
+        </div>
     </main>
 
-    <div class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-        Coded by <a href="#">ud39</a>.
-    </div>
 </body>
 </html>
