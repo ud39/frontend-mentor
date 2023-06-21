@@ -26,12 +26,21 @@ html {
 
 main {
   position:relative;
-  display:flex;
+  display:grid;
   align-items: center;
   flex-direction: column;
   margin-inline: auto;
+  grid-template-areas: 
+  "header header header header"
+  "header header header header"
+  "list list list list"
+  "list list list list"
+  "list list list list"
+  "hint hint hint hint"
+  "attribution attribution attribution attribution"
+  ;
   z-index: 1;
-  top: 15dvh;
+  top: 10dvh;
   width: 50dvh;
   height: 100dvh;
   color: white;
@@ -39,6 +48,7 @@ main {
 
 
 header {
+  grid-area: header;
   position: absolute;
   width: 100%;
   height: 30%;
@@ -48,6 +58,7 @@ header {
 }
 
 .theme-select {
+  grid-area: header;
   display: flex;
   justify-content: space-between;
 }
@@ -67,11 +78,18 @@ section {
   width: inherit;
 }
 
+section.list {
+  grid-area: list;
+  align-self: start;
+  grid-row-start: 2;
+}
+
 ul {
   list-style: none;
 }
 
 section input[type='text'] {
+  grid-area: input;
   display: flex;
   outline: none;
   margin-block-start: 5dvh;
@@ -82,15 +100,11 @@ section input[type='text'] {
 ul.list-actions {
   width: 100%;
   display: flex;
+  grid-area: list-actions;
   flex-direction: row;
   justify-content: space-evenly;
   margin:0;
   padding:0;
-}
-
-ul.list-actions{
-  display: flex;
-  margin-top:auto;
 }
 
 .list-actions li {
@@ -106,6 +120,7 @@ ul.list-actions{
 }
 
 .list-items {
+  grid-area: list-item;
   margin-block-start: 2.5dvh;
   padding: 0;
 }
@@ -136,6 +151,17 @@ ul.list-actions{
 }
 
 #drag-drop-hint{
+  grid-area: hint;
   margin-block-start: 15dvh;
   margin-block-end: 15dvh;
+  justify-self: center;
 }
+
+.attribution {
+  grid-area: attribution;
+}
+
+
+
+
+
