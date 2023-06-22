@@ -125,6 +125,10 @@ ul.list-actions {
   padding: 0;
 }
 
+.list-items li{
+  background: gray;
+}
+
 .list-item .check{
   padding: 10px;
   display: inline-block;
