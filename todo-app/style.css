@@ -1,12 +1,22 @@
 :root {
   --check-bg: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
   --bright-blue: hsl(220, 98%, 61%);
-
+  /* */
   --light-font: hsl(0, 0%, 98%);
   --light-bg: hsl(236, 33%, 92%);
   --light-blue: hsl(233, 11%, 84%);
   --light-dark-grayish: hsl(236, 9%, 61%);
   --light-vdark-grayish: hsl(235, 19%, 35%);
+
+  --dark-vblue: hsl(235, 21%, 11%)
+  --dark-saturated: hsl(235, 24%, 19%)
+  --dark-font: hsl(234, 39%, 85%)
+  --dark-hover: hsl(236, 33%, 92%);
+  --dark-blue: hsl(234, 11%, 52%);
+  --dark-dark-grayish: hsl(233, 14%, 35%);
+  --dark-vdark-grayish: hsl(237, 14%, 26%);
+
+
   font-size: 18px;
 }
 
