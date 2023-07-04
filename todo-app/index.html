@@ -22,15 +22,15 @@
     </header>
     <main>                  
         <section class="title theme-select">
-            <h1>Todo</h1>
-            <img src="images/icon-sun.svg" alt="sun" onclick="changeTheme()">
+            <h1 class="dark-theme">Todo</h1>
+            <img src="images/icon-moon.svg" alt="moon" onclick="changeTheme(this)">
         </section>
 
         <section class="list"> 
             <input type="text" name="listitem" id="" onsubmit="createItem()" hidden>
             <ul class="list-items">
 
-                <li class="list-item" data-id="1">
+                <li class="list-item dark-theme" data-id="1">
                     <span class="check"><img src="images/icon-check.svg"  alt="check"></span>
                     1
                     <img src="images/icon-cross.svg" alt="cross" onclick="deleteItem(this)"     >
@@ -50,21 +50,21 @@
                 
 
                 <li>
-                <ul class="list-actions mobile">
+                <ul class="list-actions mobile dark-theme">
                     <li><!-- Add dynamic number --> items left</li>
 
                     <li>Clear Completed</li>
                 </ul>
                 </li>
                 <li>
-                 <ul class="list-actions">
-                    <li><!-- Add dynamic number --> items left</li>
+                 <ul class="list-actions dark-theme">
+                    <li class="dark-theme"><!-- Add dynamic number --> items left</li>
 
-                    <li>All</li>
-                    <li>Active</li>
-                    <li>Completed</li>
+                    <li class="dark-theme">All</li>
+                    <li class="dark-theme">Active</li>
+                    <li class="dark-theme">Completed</li>
 
-                    <li>Clear Completed</li>
+                    <li class="dark-theme">Clear Completed</li>
                 </ul>
                 </li>
             </ul>
