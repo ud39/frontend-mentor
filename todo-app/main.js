@@ -52,7 +52,7 @@ const makeDropList = (listItems) => {
 inputItem.addEventListener("keypress", e => {
   if (e.key === 'Enter' && inputItem.value !== '') {
 
-    let listItems = document.querySelectorAll(".list-item:not(.list-actions)")
+    let listItems = document.querySelectorAll(".list-item")
     const check = document.createElement("span")
     const checkIMG = document.createElement("img")
     const crossIMG = document.createElement("img")
