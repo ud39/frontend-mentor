@@ -87,11 +87,8 @@ inputItem.addEventListener("keypress", e => {
       lastItem.insertAdjacentElement('afterend', newListItem)
     }
 
-    let numberOfItems = document.querySelectorAll(".list-item").length
-    listActionsNumberOfItems.forEach( ul => {
-      ul.innerHTML = numberOfItems + " items left"
-    })
-    
+    updateNumberOfItems() 
+
     inputItem.value = ''
     listItems = document.querySelectorAll(".list-item:not(.list-actions)")
     makeDropList(listItems)
@@ -118,11 +115,7 @@ const changeTheme = (node) => {
 const deleteItem = (node) => {
 
   node.parentNode.remove()
-  let numberOfItems = document.querySelectorAll(".list-item").length
-  listActionsNumberOfItems.forEach( ul => {
-    ul.innerHTML = numberOfItems + " items left"
-  })
-
+  updateNumberOfItems()
 }
 
 
@@ -133,4 +126,30 @@ const crossItem = (item) => {
   } else {
       item.parentNode.classList.add("cross-done")
   }
+}
+
+
+const showAllItems = () => {
+  let listItems = document.querySelectorAll(".list-item")
+
+}
+
+const showActiveItems = () => {
+  let listItems = document.querySelectorAll(".list-item")
+
+}
+
+const showCompletedItems = () => {
+}
+
+const clearCompletedItems = () => {
+}
+
+const updateNumberOfItems = () => {
+
+  let numberOfItems = document.querySelectorAll(".list-item").length
+  listActionsNumberOfItems.forEach( ul => {
+    ul.innerHTML = numberOfItems + " items left"
+  })
+
 }
