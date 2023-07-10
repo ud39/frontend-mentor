@@ -152,6 +152,23 @@ ul.list-actions {
 }
 
 
+.list-item:hover span.check,
+.list-item:hover img:last-of-type {
+  display: inline;
+  visibility: visible;
+  cursor: pointer;
+}
+
+.list-item span.check,
+.list-item img:last-of-type {
+  visibility: hidden;
+}
+
+.cross-done {
+  text-decoration: line-through;
+  color: rgba(255, 255, 255, 0.2);
+}
+
 
 .list-item .check:hover:before {
   content: "";
@@ -181,4 +198,5 @@ ul.list-actions {
 .attribution {
   grid-area: attribution;
 }
+
 

@@ -104,38 +104,21 @@ const changeTheme = (node) => {
 
 
 const deleteItem = (node) => {
+
   node.parentNode.remove()
   let numberOfItems = document.querySelectorAll(".list-item").length
   listActionsNumberOfItems.forEach( ul => {
     ul.innerHTML = numberOfItems
   })
+
 }
 
 
-const listItemDropable = (item) => {
-  item.draggable = true
+const crossItem = (item) => {
 
-  item.addEventListener("dragstart", e => {
-    draggedItem = e.target;
-    e.dataTransfer.setData("text/plain", "");
-  });
-
-  item.addEventListener("dragover", e => {
-    e.preventDefault()
-  })
-
-
-  item.addEventListener("drop", e => {
-    e.preventDefault()
-    if (draggedItem) {
-      listContainer.insertBefore(draggedItem, e.target.nextSibling);
-    }
-  })
-
-  const childElements = item.querySelectorAll("span, img");
-  childElements.forEach(childElement => {
-    childElement.addEventListener("dragstart", e => {
-      e.preventDefault();
-    });
-  });
+  if (item.parentNode.classList.contains("cross-done")) {
+      item.parentNode.classList.remove("cross-done")
+  } else {
+      item.parentNode.classList.add("cross-done")
+  }
 }
