@@ -188,6 +188,10 @@ ul.list-actions {
   mask-composite: exclude;
 }
 
+li.hidden-item {
+  display: none;
+}
+
 #drag-drop-hint{
   grid-area: hint;
   margin-block-start: 15dvh;

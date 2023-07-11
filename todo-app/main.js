@@ -131,18 +131,41 @@ const crossItem = (item) => {
 
 const showAllItems = () => {
   let listItems = document.querySelectorAll(".list-item")
+  listItems.forEach( item => {
+    item.classList.remove("hidden-item")
+  })
 
+  updateNumberOfItems()
 }
 
 const showActiveItems = () => {
-  let listItems = document.querySelectorAll(".list-item")
+  let listItems = document.querySelectorAll(".list-item.cross-done")
+  listItems.forEach( item => {
+    item.classList.add("hidden-item")
+  })
+
+  updateNumberOfItems()
 
 }
 
 const showCompletedItems = () => {
+  let listItems = document.querySelectorAll(".list-item:not(.cross-done)")
+  if (listItems.length !== 0) {
+    listItems.forEach( item => {
+      item.classList.add("hidden-item")
+    })
+    updateNumberOfItems()
+  }
 }
 
 const clearCompletedItems = () => {
+  let listItems = document.querySelectorAll(".list-item.cross-done")
+  if (listItems.length !== 0) {
+    listItems.forEach( item => {
+      item.remove()
+    })
+    updateNumberOfItems()
+  }
 }
 
 const updateNumberOfItems = () => {
