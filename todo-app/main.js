@@ -170,9 +170,15 @@ const clearCompletedItems = () => {
 
 const updateNumberOfItems = () => {
 
-  let numberOfItems = document.querySelectorAll(".list-item").length
+  let numberOfItems = document.querySelectorAll(".list-item")
+  let itemId = 0
+
+  numberOfItems.forEach( item => {
+   item.dataset.id = itemId++
+  })
+
   listActionsNumberOfItems.forEach( ul => {
-    ul.innerHTML = numberOfItems + " items left"
+    ul.innerHTML = numberOfItems.length + " items left"
   })
 
 }
