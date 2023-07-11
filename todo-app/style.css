@@ -192,6 +192,10 @@ li.hidden-item {
   display: none;
 }
 
+ul.list-actions li.active {
+  color: var(--bright-blue);
+}
+
 #drag-drop-hint{
   grid-area: hint;
   margin-block-start: 15dvh;

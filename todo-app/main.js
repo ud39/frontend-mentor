@@ -1,6 +1,7 @@
 const listContainer = document.querySelector(".list-items");
 const inputItem = document.querySelector("input[type='text']")
 const listActionsNumberOfItems = document.querySelectorAll("ul.list-actions li:first-child")
+const listActionsFilterOptions = document.querySelectorAll("ul.list-actions li:not(:first-child")
 
 
 const makeDropList = (listItems) => {
@@ -129,8 +130,17 @@ const crossItem = (item) => {
 }
 
 
-const showAllItems = () => {
+const showAllItems = (node) => {
   let listItems = document.querySelectorAll(".list-item")
+
+  listActionsFilterOptions.forEach( option => {
+    if (option === node) {
+      option.classList.add("active")
+    } else {
+      option.classList.remove("active")
+    }
+  })
+  
   listItems.forEach( item => {
     item.classList.remove("hidden-item")
   })
@@ -138,8 +148,17 @@ const showAllItems = () => {
   updateNumberOfItems()
 }
 
-const showActiveItems = () => {
+const showActiveItems = (node) => {
   let listItems = document.querySelectorAll(".list-item.cross-done")
+
+  listActionsFilterOptions.forEach( option => {
+    if (option === node) {
+      option.classList.add("active")
+    } else {
+      option.classList.remove("active")
+    }
+  })
+
   listItems.forEach( item => {
     item.classList.add("hidden-item")
   })
@@ -148,8 +167,17 @@ const showActiveItems = () => {
 
 }
 
-const showCompletedItems = () => {
+const showCompletedItems = (node) => {
   let listItems = document.querySelectorAll(".list-item:not(.cross-done)")
+
+  listActionsFilterOptions.forEach( option => {
+    if (option === node) {
+      option.classList.add("active")
+    } else {
+      option.classList.remove("active")
+    }
+  })
+
   if (listItems.length !== 0) {
     listItems.forEach( item => {
       item.classList.add("hidden-item")
@@ -158,8 +186,17 @@ const showCompletedItems = () => {
   }
 }
 
-const clearCompletedItems = () => {
+const clearCompletedItems = (node) => {
   let listItems = document.querySelectorAll(".list-item.cross-done")
+
+  listActionsFilterOptions.forEach( option => {
+    if (option === node) {
+      option.classList.add("active")
+    } else {
+      option.classList.remove("active")
+    }
+  })
+
   if (listItems.length !== 0) {
     listItems.forEach( item => {
       item.remove()
