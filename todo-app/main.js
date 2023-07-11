@@ -54,6 +54,8 @@ inputItem.addEventListener("keypress", e => {
   if (e.key === 'Enter' && inputItem.value !== '') {
 
     let listItems = document.querySelectorAll(".list-item")
+    let currentTheme = document.querySelector("section.theme-select > img")
+
     const check = document.createElement("span")
     const checkIMG = document.createElement("img")
     const crossIMG = document.createElement("img")
@@ -63,6 +65,8 @@ inputItem.addEventListener("keypress", e => {
     crossIMG.src = "images/icon-cross.svg"
 
     newListItem.classList.add('list-item')
+    listContainer.classList.add(`${currentTheme.src.includes('moon') ? "dark-theme" : "light-theme"}`)
+
     newListItem.dataset.id = listItems === undefined ? 0 : listItems.length + 1
     check.classList.add('check')
 
@@ -83,7 +87,7 @@ inputItem.addEventListener("keypress", e => {
     if (listItems.length === 0 || listItems === undefined) {
       listContainer.insertBefore(newListItem, listContainer.firstChild)
     } else {
-      listItems = document.querySelectorAll(".list-item:not([class*=' '])")
+      listItems = document.querySelectorAll(".list-item")
       const lastItem = listItems[listItems.length -1]
       lastItem.insertAdjacentElement('afterend', newListItem)
     }

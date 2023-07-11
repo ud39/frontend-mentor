@@ -27,14 +27,17 @@
         </section>
 
         <section class="list"> 
-            <input type="text" name="listitem" id="" onsubmit="createItem()" hidden>
-            <ul class="list-items">
+            <div class="todo-input">
+            <span><img src="images/icon-check.svg" alt=""></span>
+            <input type="text" name="listitem" placeholder="Create a new todo" onsubmit="createItem()" hidden>
+            </div>
+            <ul class="list-items dark-theme">
 
                 <li>
                 <ul class="list-actions mobile dark-theme">
                     <li><!-- Add dynamic number --> items left</li>
 
-                    <li>Clear Completed</li>
+                    <li onclick="clearCompletedItems(this)">Clear Completed</li>
                 </ul>
                 </li>
                 <li>
