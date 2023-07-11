@@ -144,13 +144,10 @@ const showAllItems = (node) => {
   listItems.forEach( item => {
     item.classList.remove("hidden-item")
   })
-
-  updateNumberOfItems()
 }
 
 const showActiveItems = (node) => {
   let listItems = document.querySelectorAll(".list-item.cross-done")
-
   listActionsFilterOptions.forEach( option => {
     if (option === node) {
       option.classList.add("active")
@@ -163,8 +160,11 @@ const showActiveItems = (node) => {
     item.classList.add("hidden-item")
   })
 
-  updateNumberOfItems()
+  listItems = document.querySelectorAll(".list-item:not([class~='cross-done'])") 
 
+  listItems.forEach( item => {
+    item.classList.remove("hidden-item")
+  })
 }
 
 const showCompletedItems = (node) => {
@@ -182,7 +182,14 @@ const showCompletedItems = (node) => {
     listItems.forEach( item => {
       item.classList.add("hidden-item")
     })
-    updateNumberOfItems()
+  }
+
+  listItems = document.querySelectorAll(".list-item.cross-done.hidden-item")
+  
+  if (listItems.length !== 0) {
+    listItems.forEach( item => {
+      item.classList.remove("hidden-item")
+    })
   }
 }
 
