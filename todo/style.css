@@ -115,6 +115,10 @@ section > div > span {
   border: var(--dark-vdark-grayish) solid 1px;
 }
 
+section.list > div > span > img {
+  visibility: hidden;
+}
+
 section input[type='text'] {
   font: inherit;
   grid-area: input;
