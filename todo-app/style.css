@@ -52,7 +52,6 @@ main {
   top: 10dvh;
   width: 50dvh;
   height: 100dvh;
-  color: white;
 }
 
 
@@ -64,6 +63,10 @@ header {
   background-image: url("images/bg-desktop-dark.jpg");
   background-repeat: no-repeat space;
   background-size: cover;
+}
+
+header.light-theme {
+  background-image: url("images/bg-desktop-light.jpg");
 }
 
 .theme-select {
@@ -143,10 +146,6 @@ section input[type='text']:focus {
   color: var(--dark-font);
 }
 
-section input[type='text']::placeholder {
-  text-align:center;
-}
-
 ul.list-actions {
   width: 100%;
   display: flex;
@@ -164,9 +163,7 @@ ul.list-actions {
 }
 
 .list-actions li:hover {
-  color: gray;
-  cursor: pointer;
-
+  color: var(--light-dark-grayish);
 }
 
 .list-items {
@@ -178,27 +175,60 @@ ul.list-actions {
 .list-items li{
   background: gray;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   cursor: pointer;
-}
-
-.list-item .check{
-  padding: 10px;
-  margin-inline-start: 2dvh;
-  display: inline-block;
-  position: relative;
-  z-index: 0;
-}
-
-.list-item > img {
-  margin-inline-end: 2dvh;
+  word-break: break-all;
 }
 
 .list-item {
   padding: 10px;
 }
 
+.list-item span.check{
+  padding: 3px;
+  align-self:end;
+  margin-inline-start: 2dvh;
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px solid var(--light-vdark-grayish);
+  position: relative;
+  z-index: 0;
+}
+
+.list-item:hover span.check,
+.list-item:hover span.check:hover,
+.list-item.cross-done span.check{
+  padding: 3px;
+  align-self:end;
+  margin-inline-start: 2dvh;
+  display: inline-block;
+  border-radius: 50%;
+  visibility: visible;
+  border: 1px solid transparent;
+  position: relative;
+  z-index: 0;
+}
+
+.list-item:hover span.check {
+  border: 1px solid var(--dark-vdark-grayish);
+}
+
+.list-item.cross-done:hover span.check {
+  border: 1px solid transparent;
+}
+
+.list-item:hover span.check img {
+  visibility:hidden;
+}
+
+.list-item > img {
+  margin-inline-end: 2dvh;
+}
+
+.list-item p.item-text{
+  flex-grow: 1;
+  margin-inline-start: 1dvh;
+}
 
 .list-item:hover span.check,
 .list-item:hover img:last-of-type {
@@ -207,14 +237,17 @@ ul.list-actions {
   cursor: pointer;
 }
 
-.list-item span.check,
 .list-item img:last-of-type {
   visibility: hidden;
 }
 
-.cross-done {
+li.cross-done {
   text-decoration: line-through;
-  color: rgba(255, 255, 255, 0.2);
+  color: var(--dark-dark-grayish)
+}
+
+.list-item.cross-done:hover span.check img {
+  visibility:visible;
 }
 
 .list-item .check:hover:before {
@@ -259,6 +292,13 @@ li.hidden-item {
 
 ul.list-actions li.active {
   color: var(--bright-blue);
+  font-weight: 600;
+}
+
+ul.list-actions li:nth-child(2),
+ul.list-actions li:nth-child(3),
+ul.list-actions li:nth-child(4) {
+  font-weight: 600;
 }
 
 #drag-drop-hint{
@@ -273,3 +313,89 @@ ul.list-actions li.active {
 }
 
 
+
+
+
+/* dark and light themes */
+
+.dark-theme {
+  color: var(--light-font);
+}
+
+.dark-theme:hover {
+  color: var(--dark-hover);
+}
+
+.list-actions.dark-theme li {
+  color: var(--dark-dark-grayish);
+}
+
+.list-actions.dark-theme li:hover {
+  color: var(--dark-hover);
+}
+
+html.light-theme {
+  background-color: var(--light-bg);
+}
+
+section div.light-theme {
+  background: var(--light-bg);
+}
+
+.light-theme {
+  color: var(--light-font)
+}
+
+.list-items.light-theme li.list-item{
+  color: var(--light-vdark-grayish);
+  background: var(--light-bg);
+}
+
+.list-items.light-theme li.list-item.cross-done{
+  color: var(--light-dark-grayish);
+  background: var(--light-bg);
+}
+
+.list-actions.light-theme {
+  background: var(--light-bg);
+}
+.list-actions.light-theme li {
+  background: var(--light-bg);
+  color: var(--light-dark-grayish);
+}
+
+#drag-drop-hint.light-theme{
+  color: var(--dark-blue);
+}
+
+
+@media only screen and (min-width: 376px){
+
+  .list-actions.mobile{
+    display: none;
+  }
+
+  li:has( > .list-actions) {
+    margin-block-start: 1dvh;
+  }
+
+}
+
+@media only screen and (max-width: 375px){
+
+  .list-actions:not(.mobile) :is(li:nth-child(0), li:nth-child(1), li:nth-child(5)){
+    display: none;
+  }
+
+  main {
+    width: auto;
+  }
+
+  header.dark-theme {
+    background-image: url("images/bg-mobile-dark.jpg");
+  }
+
+  header.light-theme {
+    background-image: url("images/bg-mobile-light.jpg");
+  }
+}
