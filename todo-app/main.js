@@ -56,6 +56,7 @@ inputItem.addEventListener("keypress", e => {
     let listItems = document.querySelectorAll(".list-item")
     let currentTheme = document.querySelector("section.theme-select > img")
 
+    const textContainer = document.createElement("p")
     const check = document.createElement("span")
     const checkIMG = document.createElement("img")
     const crossIMG = document.createElement("img")
@@ -64,9 +65,11 @@ inputItem.addEventListener("keypress", e => {
     checkIMG.src = "images/icon-check.svg"
     crossIMG.src = "images/icon-cross.svg"
 
+    textContainer.classList.add('item-text')
     newListItem.classList.add('list-item')
     listContainer.classList.add(`${currentTheme.src.includes('moon') ? "dark-theme" : "light-theme"}`)
 
+    textContainer.innerHTML = inputItem.value
     newListItem.dataset.id = listItems === undefined ? 0 : listItems.length + 1
     check.classList.add('check')
 
@@ -80,7 +83,7 @@ inputItem.addEventListener("keypress", e => {
 
     check.appendChild(checkIMG)
     newListItem.appendChild(check)
-    newListItem.appendChild(document.createTextNode(inputItem.value))
+    newListItem.appendChild(textContainer)
     newListItem.appendChild(crossIMG)
 
 
@@ -99,6 +102,7 @@ inputItem.addEventListener("keypress", e => {
     makeDropList(listItems)
   }
 })
+
 
 
 const changeTheme = (node) => {
