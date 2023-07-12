@@ -1,13 +1,11 @@
 :root {
-  --check-bg: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+  --check-bg: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
   --bright-blue: hsl(220, 98%, 61%);
-  /* */
   --light-font: hsl(0, 0%, 98%);
   --light-bg: hsl(236, 33%, 92%);
   --light-blue: hsl(233, 11%, 84%);
   --light-dark-grayish: hsl(236, 9%, 61%);
   --light-vdark-grayish: hsl(235, 19%, 35%);
-
   --dark-vblue: hsl(235, 21%, 11%);
   --dark-saturated: hsl(235, 24%, 19%);
   --dark-font: hsl(234, 39%, 85%);
@@ -15,10 +13,8 @@
   --dark-blue: hsl(234, 11%, 52%);
   --dark-dark-grayish: hsl(233, 14%, 35%);
   --dark-vdark-grayish: hsl(237, 14%, 26%);
-
   font-size: 18px;
 }
-
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -28,37 +24,34 @@
   margin: 0;
 }
 
-
 html {
-  background-color: var(--light-dark-grayish) ;
+  background-color: var(--light-dark-grayish);
 }
 
 main {
-  position:relative;
-  display:grid;
+  position: relative;
+  display: grid;
   align-items: center;
   flex-direction: column;
   margin-inline: auto;
   grid-template-areas: 
-  "header header header header"
-  "header header header header"
-  "list list list list"
-  "list list list list"
-  "list list list list"
-  "hint hint hint hint"
-  "attribution attribution attribution attribution"
-  ;
+    "header header header header"
+    "header header header header"
+    "list list list list"
+    "list list list list"
+    "list list list list"
+    "hint hint hint hint"
+    "attribution attribution attribution attribution";
   z-index: 1;
-  top: 10dvh;
-  width: min(60dvh, 100dvh);
+  top: 10vh;
+  width: min(60vh, 100vh);
   height: 100%;
 }
-
 
 header {
   grid-area: header;
   position: absolute;
-  width: 100dvw;
+  width: 100vw;
   height: 30%;
   background-image: url("images/bg-desktop-dark.jpg");
   background-repeat: no-repeat space;
@@ -87,7 +80,7 @@ header.light-theme {
   width: 21px;
   align-self: center;
   cursor: pointer;
-  position:absolute;
+  position: absolute;
   right: 0;
 }
 
@@ -106,29 +99,20 @@ ul {
 }
 
 section > div {
-  margin-block-start: 5dvh;
+  padding: 10px;
+  margin-block-start: 5vh;
   background: gray;
   width: inherit;
   display: flex;
 }
 
-section > div {
-  width: inherit;
-  background: gray;
-  padding: 10px;
-}
-
 section > div > span {
   align-self: end;
   padding: 3px;
-  margin-inline-start: 2dvh;
+  margin-inline-start: 2vh;
   display: inline-block;
   border-radius: 50%;
   border: var(--dark-vdark-grayish) solid 1px;
-}
-
-section > div > span > img {
-  visibility: hidden;
 }
 
 section input[type='text'] {
@@ -137,9 +121,9 @@ section input[type='text'] {
   display: flex;
   outline: none;
   border: none;
-  width:inherit;
+  width: inherit;
   background: transparent;
-  margin-inline-start: 1dvh;
+  margin-inline-start: 1vh;
 }
 
 section input[type='text']::placeholder {
@@ -151,15 +135,15 @@ section input[type='text']:focus {
   color: var(--dark-font);
 }
 
-ul.list-actions {
+.list-actions {
   width: 100%;
   display: flex;
   height: fit-content;
   grid-area: list-actions;
   flex-direction: row;
   justify-content: space-evenly;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 
 .list-actions li {
@@ -167,7 +151,6 @@ ul.list-actions {
   padding: 5px;
   cursor: pointer;
   color: var(--light-font);
-
 }
 
 .list-actions li:hover {
@@ -176,11 +159,11 @@ ul.list-actions {
 
 .list-items {
   grid-area: list-item;
-  margin-block-start: 2.5dvh;
+  margin-block-start: 2.5vh;
   padding: 0;
 }
 
-.list-items li{
+.list-items li {
   background: gray;
   display: flex;
   align-items: center;
@@ -192,10 +175,10 @@ ul.list-actions {
   padding: 10px;
 }
 
-.list-item span.check{
+.list-item span.check {
   padding: 3px;
-  align-self:end;
-  margin-inline-start: 2dvh;
+  align-self: end;
+  margin-inline-start: 2vh;
   display: inline-block;
   border-radius: 50%;
   border: 1px solid var(--light-vdark-grayish);
@@ -203,13 +186,12 @@ ul.list-actions {
   z-index: 0;
 }
 
-
 .list-item:hover span.check,
 .list-item:hover span.check:hover,
-.list-item.cross-done span.check{
+.list-item.cross-done span.check {
   padding: 3px;
-  align-self:end;
-  margin-inline-start: 2dvh;
+  align-self: end;
+  margin-inline-start: 2vh;
   display: inline-block;
   border-radius: 50%;
   visibility: visible;
@@ -227,16 +209,16 @@ ul.list-actions {
 }
 
 .list-item:hover span.check img {
-  visibility:hidden;
+  visibility: hidden;
 }
 
 .list-item > img {
-  margin-inline-end: 2dvh;
+  margin-inline-end: 2vh;
 }
 
-.list-item p.item-text{
+.list-item p.item-text {
   flex-grow: 1;
-  margin-inline-start: 1dvh;
+  margin-inline-start: 1vh;
 }
 
 .list-item:hover span.check,
@@ -256,7 +238,7 @@ li.cross-done {
 }
 
 .list-item.cross-done:hover span.check img {
-  visibility:visible;
+  visibility: visible;
 }
 
 .list-item .check:hover:before {
@@ -267,12 +249,8 @@ li.cross-done {
   padding: 1px;
   border-radius: 50%;
   background: linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
-  -webkit-mask: 
-    linear-gradient(hsl(0, 0%, 0%) 0 0) content-box, 
-    linear-gradient(hsl(0, 0%, 0%) 0 0);
-  mask: 
-    linear-gradient(hsl(0, 0%, 0%) 0 0) content-box, 
-    linear-gradient(hsl(0, 0%, 0%) 0 0);
+  -webkit-mask: linear-gradient(hsl(0, 0%, 0%) 0 0) content-box, linear-gradient(hsl(0, 0%, 0%) 0 0);
+  mask: linear-gradient(hsl(0, 0%, 0%) 0 0) content-box, linear-gradient(hsl(0, 0%, 0%) 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 }
@@ -285,7 +263,7 @@ li.cross-done {
   padding: 1px;
   border-radius: 50%;
   background: linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
-  -webkit-mask:none;
+  -webkit-mask: none;
   mask: none;
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -310,20 +288,16 @@ ul.list-actions li:nth-child(4) {
   font-weight: 600;
 }
 
-#drag-drop-hint{
+#drag-drop-hint {
   grid-area: hint;
-  margin-block-start: 15dvh;
-  margin-block-end: 15dvh;
+  margin-block-start: 15vh;
+  margin-block-end: 15vh;
   justify-self: center;
 }
 
 .attribution {
   grid-area: attribution;
 }
-
-
-
-
 
 /* dark and light themes */
 
@@ -356,10 +330,10 @@ section div.light-theme {
 }
 
 .light-theme {
-  color: var(--light-font)
+  color: var(--light-font);
 }
 
-.list-items.light-theme li.list-item{
+.list-items.light-theme li.list-item {
   color: var(--light-vdark-grayish);
   background: var(--light-bg);
 }
@@ -368,7 +342,7 @@ ul.list-items.light-theme .list-item:not(:first-child) {
   border-top: 1px solid var(--light-dark-grayish);
 }
 
-.list-items.light-theme li.list-item.cross-done{
+.list-items.light-theme li.list-item.cross-done {
   color: var(--light-dark-grayish);
   background: var(--light-bg);
 }
@@ -376,6 +350,7 @@ ul.list-items.light-theme .list-item:not(:first-child) {
 .list-actions.light-theme {
   background: var(--light-bg);
 }
+
 .list-actions.light-theme li {
   background: var(--light-bg);
   color: var(--light-dark-grayish);
@@ -386,37 +361,30 @@ ul.list-items.light-theme .list-item:not(:first-child) {
   color: var(--dark-vdark-grayish);
 }
 
-#drag-drop-hint.light-theme{
+#drag-drop-hint.light-theme {
   color: var(--dark-blue);
 }
 
-
-@media only screen and (min-width: 376px){
-
-  .list-actions.mobile{
+@media only screen and (min-width: 376px) {
+  .list-actions.mobile {
     display: none;
   }
 
-  li:has( > .list-actions) {
-    margin-block-start: 1dvh;
+  li:has(>.list-actions) {
+    margin-block-start: 1vh;
   }
-
 }
 
-@media only screen and (max-width: 375px){
-
-  .list-actions:not(.mobile) :is(li:nth-child(0), li:nth-child(1), li:nth-child(5)){
+@media only screen and (max-width: 375px) {
+  .list-actions:not(.mobile) :is(li:nth-child(0), li:nth-child(1), li:nth-child(5)) {
     display: none;
   }
-
   main {
     width: auto;
   }
-
   header.dark-theme {
     background-image: url("images/bg-mobile-dark.jpg");
   }
-
   header.light-theme {
     background-image: url("images/bg-mobile-light.jpg");
   }
