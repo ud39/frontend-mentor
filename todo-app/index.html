@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-theme">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+  
+  <title>Frontend Mentor | Todo app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+    <header class="dark-theme">
+    </header>
+    <main>                  
+        <section class="title theme-select">
+            <h1 class="dark-theme">Todo</h1>
+            <img src="images/icon-moon.svg" alt="moon" onclick="changeTheme(this)">
+        </section>
+
+        <section class="list"> 
+            <div class="todo-input dark-theme">
+            <span><img src="images/icon-check.svg" alt=""></span>
+            <input type="text" name="listitem" placeholder="Create a new todo" onsubmit="createItem()" hidden>
+            </div>
+            <ul class="list-items dark-theme">
+
+                <li>
+                <ul class="list-actions mobile dark-theme">
+                    <li><!-- Add dynamic number --> items left</li>
+
+                    <li onclick="clearCompletedItems(this)">Clear Completed</li>
+                </ul>
+                </li>
+                <li>
+                 <ul class="list-actions dark-theme">
+                    <li><!-- Add dynamic number --> items left</li>
+
+                    <li onclick="showAllItems(this)">All</li>
+                    <li onclick="showActiveItems(this)">Active</li>
+                    <li onclick="showCompletedItems(this)">Completed</li>
+
+                    <li onclick="clearCompletedItems(this)">Clear Completed</li>
+                </ul>
+                </li>
+            </ul>
+        </section>
+
+        <p id="drag-drop-hint" class="dark-theme">Drag and drop to reorder list</p>
+
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="#">ud39</a>.
+        </div>
+    </main>
+
+</body>
+</html>
