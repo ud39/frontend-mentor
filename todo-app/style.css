@@ -50,8 +50,8 @@ main {
   ;
   z-index: 1;
   top: 10dvh;
-  width: 50dvh;
-  height: 100dvh;
+  width: min(60dvh, 100dvh);
+  height: 100%;
 }
 
 
@@ -79,6 +79,7 @@ header.light-theme {
 
 .theme-select h1 {
   text-transform: uppercase;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 .theme-select img {
@@ -119,7 +120,7 @@ section > div {
 
 section > div > span {
   align-self: end;
-  padding: 10px;
+  padding: 3px;
   margin-inline-start: 2dvh;
   display: inline-block;
   border-radius: 50%;
@@ -141,6 +142,10 @@ section input[type='text'] {
   margin-inline-start: 1dvh;
 }
 
+section input[type='text']::placeholder {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
 section input[type='text']:focus {
   caret-color: var(--bright-blue);
   color: var(--dark-font);
@@ -149,6 +154,7 @@ section input[type='text']:focus {
 ul.list-actions {
   width: 100%;
   display: flex;
+  height: fit-content;
   grid-area: list-actions;
   flex-direction: row;
   justify-content: space-evenly;
@@ -157,6 +163,8 @@ ul.list-actions {
 }
 
 .list-actions li {
+  font-family: 'Josefin Sans', sans-serif;
+  padding: 5px;
   cursor: pointer;
   color: var(--light-font);
 
@@ -194,6 +202,7 @@ ul.list-actions {
   position: relative;
   z-index: 0;
 }
+
 
 .list-item:hover span.check,
 .list-item:hover span.check:hover,
@@ -334,6 +343,10 @@ ul.list-actions li:nth-child(4) {
   color: var(--dark-hover);
 }
 
+ul.list-items.dark-theme .list-item:not(:first-child) {
+  border-top: 1px solid var(--light-dark-grayish);
+}
+
 html.light-theme {
   background-color: var(--light-bg);
 }
@@ -351,6 +364,10 @@ section div.light-theme {
   background: var(--light-bg);
 }
 
+ul.list-items.light-theme .list-item:not(:first-child) {
+  border-top: 1px solid var(--light-dark-grayish);
+}
+
 .list-items.light-theme li.list-item.cross-done{
   color: var(--light-dark-grayish);
   background: var(--light-bg);
@@ -362,6 +379,11 @@ section div.light-theme {
 .list-actions.light-theme li {
   background: var(--light-bg);
   color: var(--light-dark-grayish);
+}
+
+.list-actions.light-theme li:hover {
+  background: var(--light-bg);
+  color: var(--dark-vdark-grayish);
 }
 
 #drag-drop-hint.light-theme{
