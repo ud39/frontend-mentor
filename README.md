@@ -29,6 +29,12 @@ challenges as well as that the focus was only on using vanilla Javascript, CSS a
 | [Newsletter-Sign-Up](https://ud39.github.io/frontend-mentor/newsletter/) | ![newsletter-sign-up preview](preview-images/newsletter-sign-up.png) |
 
 
+## Intermediate
+
+
+| Challenge Name       | Preview                                 |
+|----------------------|-----------------------------------------|
+| [ToDo-App](https://ud39.github.io/frontend-mentor/todo/) | ![todo preview](preview-images/todo.png) |
 
 
 ## Questions
