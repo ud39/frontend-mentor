@@ -22,7 +22,7 @@ const makeDropList = (listItems) => {
 
     item.addEventListener("drop", e => {
       e.preventDefault();
-      const droppedItem = e.target;
+      const droppedItem = (e.target.tagName.toLowerCase() === 'p') ? e.target.parentNode : e.target
       const draggedItemId = e.dataTransfer.getData("text");
       const draggedItem = document.querySelector(`.list-item[data-id="${draggedItemId}"]`);
       const parentList = draggedItem.parentNode;
