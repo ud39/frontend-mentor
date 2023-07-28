@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+}
+
+main {
+    background-color: red;
+    width: 40vw;
+    border-radius: 12px 12px 45px 12px;
+    margin: auto;
+}
+
+form {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    margin-inline-end: 20%;
+}
+
+form input {
+    width: 4rem;
+    flex-basis: 10%;
+}
+
+form label,
+form label input {
+    display: block;
+}
+
+section.age {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    align-items: flex-start;
+    margin-inline-start: 20%;
+}
