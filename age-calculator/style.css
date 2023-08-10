@@ -1,47 +1,69 @@
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
 }
 
 main {
-    background-color: red;
-    width: 40vw;
-    border-radius: 12px 12px 45px 12px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background-color: red;
+  width: 40vw;
+  border-radius: 12px 12px 45px 12px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-    main > section {
-    width: 60%;
+main > section {
+  width: 60%;
 }
 
 form {
-    padding-block-start: 2rem;
-    display: flex;
+  padding-block-start: 2rem;
+  display: flex;
 }
 
 form input {
-    width: 4rem;
-    flex-basis: 10%;
+  width: 4rem;
+  flex-basis: 10%;
 }
 
 form label,
 form label input {
-    display: block;
+  display: block;
 }
 
 section.age {
-    display: flex;
-    flex-direction: column;
-    width: 60%;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  align-items: flex-start;
 }
 
-hr {
-    width: 99%;
+section.age span {
+  font-size: 3rem;
+}
+
+span.line-break {
+  display: flex;
+  width: inherit;
+  align-self: flex-end;
+}
+
+span img {
+  background: blue;
+  border-radius: 50%;
+  padding: 1rem;
+  margin-inline-end: 1rem;
+}
+
+span hr {
+  margin-inline: 1rem;
+  width: 90%;
+  height: 0;
+  align-self: center;
+  transform: rotate(-180deg);
+
 }
