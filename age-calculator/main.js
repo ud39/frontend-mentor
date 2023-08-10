@@ -4,8 +4,9 @@ const birthday = document.querySelectorAll("section.age span strong")
 
 
 form.addEventListener('keypress', (e) => {
-  if(e.key !== "Enter") return
+  if(e.key !== "Enter" || !form.checkValidity()) return
 
+  console.log(form)
   e.preventDefault()
 
   const now = new Date()
