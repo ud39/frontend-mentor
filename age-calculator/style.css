@@ -21,8 +21,8 @@ body {
 
 main {
   background-color: var(--white);
-  width: 40vw;
-  border-radius: 12px 12px 45px 12px;
+  width: min(60vw, 100vw);
+  border-radius: 12px 12px 135px 12px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -33,10 +33,10 @@ main > section {
   width: 60%;
 }
 
-
 form {
   padding-block-start: 2rem;
   display: flex;
+  flex-wrap: wrap;
 }
 
 form input {
@@ -45,13 +45,21 @@ form input {
   font-size: 32px;
 }
 
+form label {
+  text-transform: uppercase;
+  color: var(--light-grey);
+}
 form label,
 form label input {
   display: block;
-  margin-inline-end: 2rem;
+  margin-inline-end: 1.5rem;
 }
 
-section.age {
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
 input.invalid:required:invalid {
   border: 1px solid red;
@@ -95,5 +103,33 @@ span hr {
   height: 0;
   align-self: center;
   transform: rotate(-180deg);
+}
 
+@media screen and (max-width: 375px) {
+  main {
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  section.age span strong {
+    display:block;
+  }
+
+  main > section > form {
+    display: block;
+  }
+
+  span.line-break {
+    position: relative;
+    justify-content: center;
+  }
+
+  span.line-break img {
+    z-index: 1;
+  }
+
+  span.line-break hr {
+    position: absolute;
+    z-index: 0;
+  }
 }
