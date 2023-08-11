@@ -1,13 +1,12 @@
 :root {
-  --purple:hsl(259, 100%, 65%);
+  --purple: hsl(259, 100%, 65%);
   --red: hsl(0, 100%, 67%);
 
   --black-off: hsl(0, 0%, 8%);
   --white: hsl(0, 0%, 100%);
   --white-off: hsl(0, 0%, 94%);
   --light-grey: hsl(0, 0%, 86%);
-  --smokey-grey: hsl(0, 1%, 44%)
-
+  --smokey-grey: hsl(0, 1%, 44%);
 }
 
 body {
@@ -54,6 +53,11 @@ form label input {
 
 section.age {
 
+input.invalid:required:invalid {
+  border: 1px solid red;
+}
+
+section.age {
   display: flex;
   flex-direction: column;
   width: 60%;
@@ -62,7 +66,7 @@ section.age {
 
 section.age span {
   font-size: 3rem;
-  color: var(--black-off) ;
+  color: var(--black-off);
   font-family: 'Poppins', 'sans-serif';
   font-style: italic;
   font-weight: 700;

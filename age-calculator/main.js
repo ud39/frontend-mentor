@@ -1,24 +1,30 @@
-const form = document.querySelector("form")
-const birthday = document.querySelectorAll("section.age span strong")
-
-
+const form = document.querySelector('form');
+const birthday = document.querySelectorAll('section.age span strong');
 
 form.addEventListener('keypress', (e) => {
-  if(e.key !== "Enter" || !form.checkValidity()) return
+  if (e.key === 'Enter') {
+    Array.from(form.elements).forEach((input) => {
+      if (!input.checkValidity()) input.classList.add('invalid');
+    });
+  }
 
-  console.log(form)
-  e.preventDefault()
+  if (e.key !== 'Enter' || !form.checkValidity()) return;
 
-  const now = new Date()
-  const day = form.day.value
-  const month = form.month.value
-  const year = form.year.value
+  console.log(form);
+  e.preventDefault();
 
-  const birthData = [now.getFullYear() - year, Math.abs(now.getMonth() - month), Math.abs(now.getDay() - day)]
+  const now = new Date();
+  const day = form.day.value;
+  const month = form.month.value;
+  const year = form.year.value;
 
-  birthday.forEach( (el, index) => {
-    el.innerHTML = birthData[index]
-  })
+  const birthData = [
+    now.getFullYear() - year,
+    Math.abs(now.getMonth() - month),
+    Math.abs(now.getDay() - day),
+  ];
 
-})
-
+  birthday.forEach((el, index) => {
+    el.innerHTML = birthData[index];
+  });
+});
