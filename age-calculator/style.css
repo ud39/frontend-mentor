@@ -11,6 +11,7 @@
 }
 
 body {
+  font-family: 'Poppins', 'sans-serif';
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -62,6 +63,9 @@ section.age {
 section.age span {
   font-size: 3rem;
   color: var(--black-off) ;
+  font-family: 'Poppins', 'sans-serif';
+  font-style: italic;
+  font-weight: 700;
 }
 
 section.age span strong {
