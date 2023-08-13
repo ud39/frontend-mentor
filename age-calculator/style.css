@@ -21,7 +21,7 @@ body {
 
 main {
   background-color: var(--white);
-  width: min(60vw, 100vw);
+  width: min(40vw, 100vw);
   border-radius: 12px 12px 135px 12px;
   margin: auto;
   display: flex;
@@ -49,10 +49,23 @@ form label {
   text-transform: uppercase;
   color: var(--light-grey);
 }
+
 form label,
 form label input {
   display: block;
   margin-inline-end: 1.5rem;
+}
+
+label input +p {
+  display: none;
+  text-transform: none;
+  font-family: inherit;
+  font-style: italic;
+  color: var(--red);
+}
+
+label input:focus-visibles {
+  border: 1px solid blue;
 }
 
 input::-webkit-outer-spin-button,
@@ -61,8 +74,8 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-input.invalid:required:invalid {
-  border: 1px solid red;
+input.invalid:required:invalid{
+  border: 1px solid var(--red);
 }
 
 section.age {
@@ -106,6 +119,7 @@ span hr {
 }
 
 @media screen and (max-width: 375px) {
+
   main {
     width: 100%;
     gap: 0.5rem;
