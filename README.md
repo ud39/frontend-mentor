@@ -23,7 +23,7 @@ challenges as well as that the focus was only on using vanilla Javascript, CSS a
 | Challenge Name                                                           | Preview                                                              |
 | ------------------------------------------------------------------------ | -------------------------------------------------------------------- |
 | [Newsletter-Sign-Up](https://ud39.github.io/frontend-mentor/newsletter/) | ![newsletter-sign-up preview](preview-images/newsletter-sign-up.png) |
-| [Age-Calculator](https://ud39.github.io/frontend-mentor/age-calculator/) | ![age-calculator preview](previeW-images/age-calculator.png)         |
+| [Age-Calculator](https://ud39.github.io/frontend-mentor/age-calculator/) | ![age-calculator preview](preview-images/age-calculator.png)         |
 
 ## Intermediate
 
